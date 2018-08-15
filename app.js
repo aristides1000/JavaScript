@@ -246,15 +246,19 @@ Las funciones y los procedimeintos son iguales en JavaScript
 
 */
 
+/*
 function primeraFuncion(){
 
 	console.log("invocada");
 
 }
+*/
 
 /*OJO las funciones siempre retornan un valor*/
 
+/*
 var miFuncion = primeraFuncion;
+*/
 
 /*
 var a = primeraFuncion();
