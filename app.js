@@ -634,11 +634,13 @@ console.log( legolas );
 //Seccion 2, Clase 19
 //Prototipos: prototype
 
+/*
 function Persona(){
 	this.nombre   = "Fernando";
 	this.apellido = "Herrera";
 	this.edad     = 30;
 	this.pais     = "Costa Rica";
+*/
 
 /*Esto ya no es necesario*/
 /*
@@ -646,18 +648,22 @@ function Persona(){
 		console.log( this.nombre + " " + this.apellido + "("+ this.edad +")");
 	}
 */
+
+/*
 }
+*/
 
 /*
 Persona.prototype.pais = "Costa Rica";
 */
 
+/*
 Persona.prototype.imprimirInfo = function(){
 	console.log( this.nombre + " " + this.apellido + "("+ this.edad +")");
 }
 
 var fer = new Persona();
-
+*/
 /*La parte de abajo no es necesaria*/
 /*
 fer.imprimirInfo();
@@ -673,6 +679,7 @@ console.log( fer.imprimirInfo() );
 /*los prototipos son los valores predeterminados de una variable o una palabra reservada es por ello que siempre estamos usando prototipos*/
 /*esto lo podemos ver en la consola de nuestros navegadores*/
 
+/*
 Number.prototype.esPositivo = function(){
 
 	if ( this > 0 ) {
@@ -680,5 +687,66 @@ Number.prototype.esPositivo = function(){
 	}else{
 		return false;
 	}
-
 }
+*/
+
+//Seccion 2, Clase 20
+//Funciones Anónimas
+
+/*
+*Las funciones anónimas nos ayudan a mantener el código bastante encapsulado o mejor dicho, para que nuestro código sea accidentalmente manipulado por otras secciones de nuestro programa
+*No sólo se usan para esto pero ese es su uso más común
+*/
+
+/*cómo evitamos el mal comportamiento de a y su cambio, bueno, hay muchas maneras*/
+/*La mejor de todas es a través de la utilización de las funciones anónimas*/
+
+/*dos paréntesis juntos representan una invocación*/
+/*
+(function(){*/
+	/*esta sintaxis es de una función anónima*/
+	/*y se mueve el código comentado dentro de esta función*/
+/*
+var a = 10;
+
+console.log( a );
+
+function cambiarA(){
+	a=20;
+}
+
+cambiarA();
+
+console.log( a );
+
+})();*/ /*esta función se invoca con */
+
+/*Esta es otra forma de invocar funciones anónimas*/
+/*
+function ejecutarFuncion( fn ){
+	if ( fn() === 1 ) {
+		return true;
+	}else{
+		return false;
+	}
+
+	return true;
+};
+
+console.log( 
+
+	ejecutarFuncion( function(){
+		console.log("función anónima ejecutada!");
+		return 0;
+	})
+
+);
+*/
+
+/*Subimos este código y lo metemos en console.log*/
+/*
+ejecutarFuncion( function(){
+	console.log("función anónima ejecutada!");
+	return 1;
+});
+*/
