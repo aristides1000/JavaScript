@@ -750,3 +750,7 @@ ejecutarFuncion( function(){
 	return 1;
 });
 */
+
+//Seccion 2, Clase 21
+//Funciones typeof e instanceof... interesante
+
