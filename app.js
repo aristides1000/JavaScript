@@ -754,3 +754,18 @@ ejecutarFuncion( function(){
 //Seccion 2, Clase 21
 //Funciones typeof e instanceof... interesante
 
+/*Va a ver momentos en los que nosotros necesitamos estar seguros del
+tipo de dato que estamos recibiendo antes de hacer alguna acción allí es donde entra en juego la función typeof*/
+
+function identifica( param ){ /*lo que está entre los paréntesis son los parámetros*/
+	console.log( typeof param );/*con esta función indentidifacmos el tipo de dato*/
+
+}
+
+identifica( {} ); /*Aquí va el dato que queremos identificar que queremos identificar*/	
+/*
+los tipos de datos que muestra por consola son:
+( 1 ) number
+( "1" ) string
+( {} ) object
+*/
