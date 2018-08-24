@@ -756,16 +756,83 @@ ejecutarFuncion( function(){
 
 /*Va a ver momentos en los que nosotros necesitamos estar seguros del
 tipo de dato que estamos recibiendo antes de hacer alguna acción allí es donde entra en juego la función typeof*/
+/*Esta función nos sirve para verificar el tipo de dato que estamos pasando*/
+/*Y da como inicio al polimorfismo*/
 
-function identifica( param ){ /*lo que está entre los paréntesis son los parámetros*/
-	console.log( typeof param );/*con esta función indentidifacmos el tipo de dato*/
+/*function identifica( param ){ *//*lo que está entre los paréntesis son los parámetros*/
+	
+	//console.log( typeof param );/*con esta función indentidifacmos el tipo de dato*/
 
+	/*
+	if ( typeof param == "function" ){
+		param();
+	}else{
+		console.log( param );
+	}
+	*/
+	/*console.log( typeof param );*/
+	/*Si quiero saber que tipo de dato es lo hago con un typeof*/
+	/*console.log( param instanceof Persona );*/
+	/* instanceof es como decir === */
+	/* Esta parte de arriba va a retornar un booleano */
+/*
 }
 
-identifica( {} ); /*Aquí va el dato que queremos identificar que queremos identificar*/	
+function Persona(){
+	this.nombre = "Fernando";
+	this.edad = 30;
+}
+*/
+/*
+var fernando = new Persona();
+
+identifica( fernando );*/ /*Aquí va el dato que queremos identificar que queremos identificar*/
+/*
+Toda función en realidad es un objeto
+*/	
+/*si encierro a fernando entre comillas "" lo toma como palabra, no como persona*/
 /*
 los tipos de datos que muestra por consola son:
 ( 1 ) number
 ( "1" ) string
 ( {} ) object
+( juan ) cuando yo escribo juan me retorna que es un objeto, ya que es un objeto, "para saber si es un objeto tenemos que tener en cuenta que está entre llaves {}"
+( function(){} ) de tipo funcion
 */
+
+//Arreglos
+//Sección 3, Clase 22
+
+/*Los arreglos en JavaScript son una colección de objetos*/
+/*A pesar de que haya de números y de texto son objetos*/
+
+/*Los arreglos son una colección de datos iguales del mismo tipo, eso es todo, no hay que perderse*/
+
+/*esto new Array() es lo mismo que esto []*/
+/*Se sabe que es un arreglo por que estamos en presencia de corchetes []*/
+
+var arr = [5,4,3,2,1];
+console.log( arr );
+/*Los arreglos comienzan con la posición 0, no desde la posición 1*/
+/*La posición arr [5] no existe por eso nos aparece como indefinida o undefined*/
+console.log( arr [0], arr [4], arr [5] );
+
+arr.reverse();
+/*la función arr.reverse() voltea la posición de los datos contenidos en el arreglo*/
+console.log( arr );
+
+/*La función Map nos permite ejecutar una función contra cada uno de los elementos sin hacer un ciclo for, sin hacer otra cosa*/
+arr = arr.map( function(elem){
+	elem *= elem;
+	return elem;
+});
+console.log( arr );
+
+arr = arr.map( Math.sqrt );/*la función Math.sqrt ejecuta la raíz cuadrada del valor que le enviemos, en nuestro caso como estamos usando la función map, la aplica a cada uno de los valores que tengamos*/
+console.log( arr );/*sirve para mostrar resultados por consola, siempre es recomendable mostrar resultados por la consola*/
+
+/*join tambien regresa un nuevo arreglo*/
+/*el join lo que hace es traernos toda el arreglo unido con comas, ya que entre los parentesis del join, no especificamos más nada, osea, pega el arreglo*/
+arr = arr.join(); /*aquí se le coloca el caracter o cadena de caracteres de separación que va a tener cada valor de nuestro arreglo, si no colocamos nada toma por defecto las comas de separación*/
+console.log( arr );
+
