@@ -811,28 +811,90 @@ los tipos de datos que muestra por consola son:
 /*esto new Array() es lo mismo que esto []*/
 /*Se sabe que es un arreglo por que estamos en presencia de corchetes []*/
 
-var arr = [5,4,3,2,1];
-console.log( arr );
+/*var arr = [5,4,3,2,1];
+console.log( arr );*/
 /*Los arreglos comienzan con la posición 0, no desde la posición 1*/
 /*La posición arr [5] no existe por eso nos aparece como indefinida o undefined*/
-console.log( arr [0], arr [4], arr [5] );
+
+/*console.log( arr [0], arr [4], arr [5] );
 
 arr.reverse();
+*/
 /*la función arr.reverse() voltea la posición de los datos contenidos en el arreglo*/
+/*
 console.log( arr );
-
+*/
 /*La función Map nos permite ejecutar una función contra cada uno de los elementos sin hacer un ciclo for, sin hacer otra cosa*/
+/*
 arr = arr.map( function(elem){
 	elem *= elem;
 	return elem;
 });
 console.log( arr );
 
-arr = arr.map( Math.sqrt );/*la función Math.sqrt ejecuta la raíz cuadrada del valor que le enviemos, en nuestro caso como estamos usando la función map, la aplica a cada uno de los valores que tengamos*/
-console.log( arr );/*sirve para mostrar resultados por consola, siempre es recomendable mostrar resultados por la consola*/
+arr = arr.map( Math.sqrt );
+*/
+/*la función Math.sqrt ejecuta la raíz cuadrada del valor que le enviemos, en nuestro caso como estamos usando la función map, la aplica a cada uno de los valores que tengamos*/
+/*
+console.log( arr );
+*/
+/*sirve para mostrar resultados por consola, siempre es recomendable mostrar resultados por la consola*/
 
 /*join tambien regresa un nuevo arreglo*/
 /*el join lo que hace es traernos toda el arreglo unido con comas, ya que entre los parentesis del join, no especificamos más nada, osea, pega el arreglo*/
-arr = arr.join(); /*aquí se le coloca el caracter o cadena de caracteres de separación que va a tener cada valor de nuestro arreglo, si no colocamos nada toma por defecto las comas de separación*/
+/*
+arr = arr.join("|");
+*/
+/*aquí se le coloca el caracter o cadena de caracteres de separación que va a tener cada valor de nuestro arreglo, si no colocamos nada toma por defecto las comas de separación*/
+/*
+console.log( arr );
+*/
+/*La función del split hace lo contrario que la función del join, osea, que le quita los separadores de los arreglos que nosotros queramos*/
+/*
+arr = arr.split("|");
+*/
+/*dento del paréntesis colocamos los separadores que queremos eliminar*/
+/*
+console.log( arr );
+*/
+/*con la función de push, podemos hacer crecer el arreglo que creamos y le agregamos un nuevo valor al final del arreglo*/
+/*
+arr.push("6");
+console.log( arr );
+*/
+/*con la función de unshift le agregamos un nuevo valor al arreglo al principio*/
+/*
+arr.unshift("0");
 console.log( arr );
 
+console.log( arr.toString() );
+*/
+/*console.log( arr.toString() ); sirve para expresar tal cual los arreglos*//*el toString() es mucho más rápido que el split()*/
+/*
+var elimine = arr.pop();
+console.log( arr, elimine );
+*/
+/*la función pop(); nos sirve para eliminar el último valor del arreglo, además de ello esta función no solo lo elimina, sino que también lo almacena, es por ello que al hacer un console.log( arr, elimine ); nos muestra el valor almacenado*/
+/*
+arr.splice( 1, 0, "10", "20", "30" );
+*/
+/*la función splice( 1, 1); siempre recibe dos parámetros, dónde el primer parámetro nos dice la posición a la que queremos llegar, y el segundo valor es la cantidad de valores a partir de allí que deseo eliminar*/
+/*y al colocar splice( 1, 6 ); nos elimina todo no importando que eliminemos todo y nos pasemos*/
+/*a su vez se le pueden agregar parámetros, para ello lo colocámos como un 3er valor a los parámetros pasados, ejemplo arr.splice( 1, 1, "10" );, y no solo eso, tambien puedo meter los parámetros que me den la gana apartir de la posición que quice y eliminé según los parámetros escritos, ejemplo arr.splice( 1, 1, "10", "20", "30" );*/
+/*el spice no necesariamente tiene que eliminar algo, si yo le coloco al segundo parámetro un valor de 0 entonces no elimina nada y coloca los valores que he colocado antes del valor número 1 osea, los coloca en la posición que quiero quiero antes del datos que estaba con anterioridad, por ejemplo: arr.splice( 1, 0, "10", "20", "30" );*/
+/*
+console.log( arr );
+*/
+/*la función console.log( arr ); nos sirve para mostrar por consola resultados*/
+
+/*
+arr = arr.slice( 1, 3 );
+*/
+/*la función slice(); es como decir un pedazo de pizza o un pedazo de pastel "un slice de pizza" y además de ello, el primer parámetro nos dice desde donde y el segundo parámetro nos dice los valores que vamos a cortar, por ejemplo arr = arr.slice( 0, 2 );*/
+/*pero si hago esto arr = arr.slice( 1, 3 ); sólo nos agarra los valores que se encuentran comprendidos entre estos parámetros, osea, los valores que se encuentran en te la posición 1 hasta la posición 3 sin tomar el último valor, osea, que sólo va a tomar los valores que se encuentran localizados en la posición 1 y la posición 2*/
+/*
+console.log( arr );
+*/
+
+//Arreglos parte 2
+//sección 3, clase 23
