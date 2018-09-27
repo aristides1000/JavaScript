@@ -278,20 +278,20 @@ DE HECHO, TODO RETORNA UN VALOR EN JAVASCRIPT
 function imprimir( nombre , apellido ){
 */
 /*Si deseamos mandar otros parámetros los mandámos por comas*/
-	
-	/*
-	if ( apellido === undefined ) {
-		apellido = "xxx";
-	}
-	*/
-	/*otra forma de hacer lo de arriba es*/
-	/*
-	apellido = apellido || "xxx";
-	*/
-	/*impresión por pantalla*/
-	/*
-	console.log( nombre + " " + apellido );
-	*/
+
+/*
+if ( apellido === undefined ) {
+    apellido = "xxx";
+}
+*/
+/*otra forma de hacer lo de arriba es*/
+/*
+apellido = apellido || "xxx";
+*/
+/*impresión por pantalla*/
+/*
+console.log( nombre + " " + apellido );
+*/
 /*
 }
 */
@@ -320,10 +320,12 @@ var persona = {
 }
 */
 /*también los objetos pueden ser anónimos*/
-/*imprimir(obj*//*{
+/*imprimir(obj*/
+/*{
 	nombre: "Juan",
 	apellido: "Padilla"
-}*//*);*/
+}*/
+/*);*/
 /*
 console.log( obj );
 */
@@ -354,11 +356,13 @@ var miFuncion = function(){
 */
 
 /*aquí vamos a declarar la función anónima*/
-/*imprimir( miFuncion*/ /*function(){
+/*imprimir( miFuncion*/
+/*function(){
 
-	console.log("función anónima");
+   console.log("función anónima");
 
-}*//*);*/
+}*/
+/*);*/
 
 //Sección 2, Clase 13
 //El retorno de las funciones
@@ -420,10 +424,10 @@ if ( esMayor05() ) {
 /*
 function crearPersona( nombre, apellido ){
 */
-	/*Los objetos en las funciones las podemos regresar de dos maneras explícitas o anónimas*/
-	/*esto es un objeto explícito*/
-	/*var obj = {};*/
-	/*esto es un objeto anónimo*/
+/*Los objetos en las funciones las podemos regresar de dos maneras explícitas o anónimas*/
+/*esto es un objeto explícito*/
+/*var obj = {};*/
+/*esto es un objeto anónimo*/
 /*	return {
 		nombre: nombre,
 		apellido: apellido
@@ -480,8 +484,10 @@ a();
 /*Porque name es como una especie de palabra reservada*/
 /*
 a.nombre = "María";
-a.direccion = { *//*a.direccion es un objeto*/
-/*	pais: "Costa Rica",*//*estas son como sus propiedades*/
+a.direccion = { */
+/*a.direccion es un objeto*/
+/*	pais: "Costa Rica",*/
+/*estas son como sus propiedades*/
 /*	ciudad: "San José",
 	edificio:{
 		piso: "8vo",
@@ -497,12 +503,14 @@ a.direccion = { *//*a.direccion es un objeto*/
 /*
 var nombre = "Juan Carlos"
 
-var persona = {*//*este es un objeto */
+var persona = {*/
+/*este es un objeto */
 /*	nombre: "María",
 	apellido: "Dubon",
 	imprimirNombre: function(){
 
-		console.log( this.nombre + " " + this.apellido )*/ /*el this aquí adentro hace referencia al objeto*/
+		console.log( this.nombre + " " + this.apellido )*/
+/*el this aquí adentro hace referencia al objeto*/
 /*
 	},
 	direccion:{
@@ -512,7 +520,8 @@ var persona = {*//*este es un objeto */
 			//console.log( this );
 			//console.log ( "La dirección es en " + this.pais );
 
-			var self = this;*/ /*el self no es una palabra reservada de Javascript aunque se use mucho*/
+			var self = this;*/
+/*el self no es una palabra reservada de Javascript aunque se use mucho*/
 /*
 			var nuevaDireccion = function(){
 				
@@ -541,25 +550,26 @@ persona.direccion.obtenerPais();
 /*
 function Persona(nombre, apellido){
 	*/
-	/*
-	this.nombre = "Juan";
-	this.apellido = "Mendoza";
-	*/
-	/*
-	this.nombre = nombre;
-	this.apellido = apellido;
-	this.edad = 30;
-	*/
-	//console.log("Pasó por aquí")
-	/*
-	this.imprimirPersona = function(){
-		return this.nombre + " " + this.apellido + "("+ this.edad +")";
-	}
+/*
+this.nombre = "Juan";
+this.apellido = "Mendoza";
+*/
+/*
+this.nombre = nombre;
+this.apellido = apellido;
+this.edad = 30;
+*/
+//console.log("Pasó por aquí")
+/*
+this.imprimirPersona = function(){
+    return this.nombre + " " + this.apellido + "("+ this.edad +")";
+}
 
 }
 */
 /*
-var juan = new Persona("Juan", "Mendoza");*/ /*si yo le quito la palabra reservada new el función Persona, coloca los objetos nombre,apellido y edad en window, osea en lo global, no reserva espacio en memoria*/
+var juan = new Persona("Juan", "Mendoza");*/
+/*si yo le quito la palabra reservada new el función Persona, coloca los objetos nombre,apellido y edad en window, osea en lo global, no reserva espacio en memoria*/
 /*
 console.log( juan );
 console.log( juan.nombre );
@@ -572,7 +582,8 @@ console.log( juan.imprimirPersona() );
 //Seccion 2, Clase 18
 //El señor de los anillos :: The JavaScript Game
 
-/*function Jugador( nombre ){*//*las clases van siempre en mayúsculas e indica que es una función de primera clase*/
+/*function Jugador( nombre ){*/
+/*las clases van siempre en mayúsculas e indica que es una función de primera clase*/
 /*
 	this.nombre = nombre;
 	this.pv = 100;
@@ -583,8 +594,9 @@ console.log( juan.imprimirPersona() );
 		if ( this.sp >= 40 ) {
 			
 			this.sp -= 40;*/
-			//jugadorObjetivo.pv = jugadorObjetivo.pv + 20;
-			/*esto de aquí abajo es lo mismo que lo de arriba*//*
+//jugadorObjetivo.pv = jugadorObjetivo.pv + 20;
+/*esto de aquí abajo es lo mismo que lo de arriba*/
+/*
 			jugadorObjetivo.pv += 20;			
 		}else{
 			console.info( this.nombre + " no tiene sp")
@@ -704,8 +716,8 @@ Number.prototype.esPositivo = function(){
 /*dos paréntesis juntos representan una invocación*/
 /*
 (function(){*/
-	/*esta sintaxis es de una función anónima*/
-	/*y se mueve el código comentado dentro de esta función*/
+/*esta sintaxis es de una función anónima*/
+/*y se mueve el código comentado dentro de esta función*/
 /*
 var a = 10;
 
@@ -719,7 +731,8 @@ cambiarA();
 
 console.log( a );
 
-})();*/ /*esta función se invoca con */
+})();*/
+/*esta función se invoca con */
 
 /*Esta es otra forma de invocar funciones anónimas*/
 /*
@@ -759,22 +772,23 @@ tipo de dato que estamos recibiendo antes de hacer alguna acción allí es donde
 /*Esta función nos sirve para verificar el tipo de dato que estamos pasando*/
 /*Y da como inicio al polimorfismo*/
 
-/*function identifica( param ){ *//*lo que está entre los paréntesis son los parámetros*/
-	
-	//console.log( typeof param );/*con esta función indentidifacmos el tipo de dato*/
+/*function identifica( param ){ */
+/*lo que está entre los paréntesis son los parámetros*/
 
-	/*
-	if ( typeof param == "function" ){
-		param();
-	}else{
-		console.log( param );
-	}
-	*/
-	/*console.log( typeof param );*/
-	/*Si quiero saber que tipo de dato es lo hago con un typeof*/
-	/*console.log( param instanceof Persona );*/
-	/* instanceof es como decir === */
-	/* Esta parte de arriba va a retornar un booleano */
+//console.log( typeof param );/*con esta función indentidifacmos el tipo de dato*/
+
+/*
+if ( typeof param == "function" ){
+    param();
+}else{
+    console.log( param );
+}
+*/
+/*console.log( typeof param );*/
+/*Si quiero saber que tipo de dato es lo hago con un typeof*/
+/*console.log( param instanceof Persona );*/
+/* instanceof es como decir === */
+/* Esta parte de arriba va a retornar un booleano */
 /*
 }
 
@@ -786,10 +800,11 @@ function Persona(){
 /*
 var fernando = new Persona();
 
-identifica( fernando );*/ /*Aquí va el dato que queremos identificar que queremos identificar*/
+identifica( fernando );*/
+/*Aquí va el dato que queremos identificar que queremos identificar*/
 /*
 Toda función en realidad es un objeto
-*/	
+*/
 /*si encierro a fernando entre comillas "" lo toma como palabra, no como persona*/
 /*
 los tipos de datos que muestra por consola son:
@@ -869,7 +884,8 @@ console.log( arr );
 
 console.log( arr.toString() );
 */
-/*console.log( arr.toString() ); sirve para expresar tal cual los arreglos*//*el toString() es mucho más rápido que el split()*/
+/*console.log( arr.toString() ); sirve para expresar tal cual los arreglos*/
+/*el toString() es mucho más rápido que el split()*/
 /*
 var elimine = arr.pop();
 console.log( arr, elimine );
@@ -898,3 +914,76 @@ console.log( arr );
 
 //Arreglos parte 2
 //sección 3, clase 23
+/*
+var arr = [
+	true,
+	{*/
+/*todo lo que esté entre llaves en javascript es un objeto*/
+/*
+		nombre:"Fernando",
+		apellido:"Herrera"
+	},
+	function(){
+		console.log("Estoy viviendo en un arreglo");
+	},
+	function( persona ){
+		console.log( persona.nombre + " " + persona.apellido );
+	},
+	[
+		"Fernando",
+		"Carlos",
+		"Hernando",
+		"Melissa",
+		[
+			"Juan",
+			"Pedro",
+			"Dilcia",
+			function(){
+				console.log( this );
+			}
+		]
+	]
+];
+*/
+/*console.log( arr.length );*/
+/*La función console.log( arr.length ); nos sirve para saber el largo de un arreglo, osea la cantidad de elementos que posee un arreglo*/
+/*
+console.log( arr );
+console.log( arr[0] );*/
+/*con esto le digo la posición a la que quiero apuntar y está entre conchetes "[]"*/
+/*
+console.log( arr[1].nombre + " " + arr[1].apellido );
+
+arr[2]();*/
+/*así se invocan a las funciones que se encuentran dentro de los arreglos*/
+/*
+arr[3]( arr[1] );*/
+/*tiene mucho que ver con los arreglos ya definidos*/
+/*
+console.log( arr[4][4][1] ); */
+/*para no asustarnos tenemos que seguir la cascadas de los arreglos*/
+/*
+var arreglo2 = arr[4][4];
+
+arreglo2[1] = "Pedra!";
+
+console.log( arreglo2 );
+console.log( arr );
+
+arreglo2[3]();
+*/
+
+//Argumentos
+//Sección 3, Clase 24
+
+function miFuncion() {
+
+    console.log(arguments);
+
+}
+
+/*console.log( miFuncion() );*/
+/*Aquí me aparece en la consola un undefined*/
+
+miFuncion();
+/*así es cómo es como se debe colocar*/
