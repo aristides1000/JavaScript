@@ -269,7 +269,7 @@ console.log( a );
 */
 
 /*
-DE HECHO, TODO RETORNA UN VALOR EN JAVASCRIPT
+DE HECHO RETORNA UN VALOR EN JAVASCRIPT
 */
 
 //Sección 2, Clase 13
@@ -975,13 +975,28 @@ arreglo2[3]();
 
 //Argumentos
 //Sección 3, Clase 24
+/*
+var arguments = 10;
 
-function miFuncion() {
+function miFuncion(a,b,c,d) {
 
-    console.log(arguments);
+	if (arguments.length !== 4 ) {
+		console.error("la función necesita 4 parametros");
+		alert("la función necesita 4 parametros");
+		return;*//*esto es para que nos retorne solo el error*/
+	/*
+	}
+	*/
+    //console.log(arguments);
+    /*
+    console.log( a + b + c + d );*//*ver linea 996 contenedora de miFuncion(10, 20, 30); para ver y comprender el error*/
+    /*
+    console.log( a, b, c, d );*//*da error porque undefined no es un número y la "d" es indefinida*/
+    /*
+    console.log( 30 + undefined );
 
 }
-
+*/
 /*console.log( miFuncion() );*/
 /*Aquí me aparece en la consola un undefined*/
 
