@@ -1000,5 +1000,466 @@ function miFuncion(a,b,c,d) {
 /*console.log( miFuncion() );*/
 /*Aquí me aparece en la consola un undefined*/
 
-miFuncion();
+/*miFuncion(10, 20, 30, 40, {}, function(){});*//*{} esto es un objeto anónimo*/
+/*tambien pueden ir funciones así function(){}*/
 /*así es cómo es como se debe colocar*/
+
+/*
+miFuncion(10, 20, 30, 40);*//*Esto me va a dar error porque no le estoy mandando el último parámetro*/
+
+//Sobre carga de operadores en JavaScript
+//Sección 3, Clase 25
+
+/*La sobre carga de operadores es muy parecido a esto*/
+
+/*
+function crearProducto(){
+	
+}
+
+function crearProducto(nombre){
+	
+}
+
+function crearProducto(nombre, precio){
+	
+}
+*/
+
+/*Lo que busca la sobre carga de operadores tiene que ver con buscar la forma de que se agreguen nuevas características cada vez a una función, si hacemos esto en javascript lo que va a suceder es que se van a sobre-escribir la función con el último valor*/
+
+/*En Javascript no se puede hacer la sobre carga de operadores pero hay formas de sobrellevar este error, una de las formas es esta*/
+/*
+function crearProducto(nombre, precio){
+	
+	nombre = nombre || "sin nombre";
+	precio = precio || 0;
+
+	console.log( "Producto:", nombre, "Precio:", precio );
+
+}
+
+function crearProducto100(nombre){
+
+	crearProducto(nombre, 100);
+
+}
+
+function crearProductoCamisa( precio ){
+	crearProducto("Camisa", precio);
+}
+
+crearProducto("Lapiz");
+crearProducto100("Corrector");
+crearProductoCamisa( 75 );
+*/
+//Polimorfismo en Javascript
+//Sección 3, Clase 26
+
+/*
+El polimorfismo no es más que una función que puede recibir diferentes tipos de parámetros o diferentes tipos de datos  
+*/
+/*
+function determinaDato( a ){
+
+	if ( a === undefined ) {
+		console.log("A es undefined... no se que hacer");
+	}
+
+	if ( typeof a === "number" ) {
+		console.log("A es un número, y puedo hacer operación con números");
+	}
+
+	if ( typeof a === "string" ) {
+		console.log("A es un texto, puedo hacer operaciones con textos");
+	}
+
+	if ( typeof a === "object" ) {
+		console.log("A es un objeto... pero puede cualquier cosa...")
+			
+		if ( a instanceof Number ) {
+			console.log("A es un objeto numérico...")
+		}
+	}
+}
+*/
+/*
+var b = new Number(3);*//*aquí lo estamos definiendo como un objeto, no como un valor primitivo, es un objeto de tipo número*/
+/*
+console.log( b );
+*/
+/*determinaDato({
+		nombre:"Fernando"
+});*//*Aquí se coloca el valor que deseamos evaluar*/
+/*
+determinaDato( b );
+*/
+
+//Cuidado con las funciones y su contexto
+//Sección, Clase 27
+
+/*
+function crearFunciones(){*/
+	/*todo lo que está dentro de las llaves de la función es su contexto*/
+/*
+	var arr = [];
+	var numero = 1;
+
+	for (var numero = 1; numero <= 5; numero ++ ) {
+		
+		arr.push( 
+
+			(function(numero){
+
+				return function(){
+					console.log( numero );
+				}
+
+			})(numero)
+
+		);
+
+	}
+*/
+
+	/*esta parte ya no hace falta por la simplificación de arriba*/
+	/*
+	arr.push( 
+
+		(function(numero){
+
+			return function(){
+				console.log( numero );
+			}
+
+		})(numero)
+
+	);
+
+	numero = 2;
+
+	arr.push( function(){
+		console.log( numero );
+	});
+
+	numero = 3;
+
+	arr.push( function(){
+		console.log( numero );
+	});
+	*/
+	/*Hasta aquí es la parte que ya no nos importa*/
+
+
+	//numero = 10;/*con esto lo que hago es que imprima un 10 como valor del número*/
+	/*
+	return arr;
+}
+*/
+/*
+var funciones = crearFunciones();
+
+funciones[0]();
+funciones[1]();
+funciones[2]();
+funciones[3]();
+funciones[4]();
+*/
+
+//Objeto Number
+//Sección 3, Clase 28
+
+/*esto*/
+//var a = 10;
+/*No es lo mismo que esto*/
+//var b = new Number(10);
+
+/*
+var a = 100.456456;
+*/
+/*
+console.log( a.toFixed(5) );
+
+a = a.toString();
+console.log( a );*//*esto lo que hace es darnos el valor de a cómo si fuese una cadena de caracteres*/
+
+/*
+console.log( a );
+console.log( a.toPrecision(2) );*//*con esta expresión solo toma los valores desde la izquierda a la derecha contando el número de caracteres que le pasemos en estos parámetros a.toPrecision(2)*/
+/*
+a = -10;
+*/
+/*a *= 10000000000000000000000;*//*javascript aguanta hasta 308 números exponenciales si superamos esta cantidad de exponenciales la pantalla nos muestra el valor de infinito osea, infinity por consola*/
+/*Cabe acoar que también hay un infinity negativo, osea, -Infinity que se muestra por consola*/
+
+/*Cuando dice por consola NaN not at number, quiere decir que sus valores no son numéricos*/
+
+/*
+console.log( a + 10 );
+
+var b = new Number( "20" );
+
+console.log( b );
+console.log( b.valueOf() );
+*/
+
+//Objeto Booleano
+//Sección 3, Clase 29
+
+/*
+var a = true;
+var b = false;
+*/
+
+/*var x = "false";*//*Esto es un String, y por ende el valor booleano devuelve un true*/
+/*var x = false;*//*así si da falso, porque no es un String, osea, no está entre comillas dobles, sino que está más bien escrito directamente*/
+
+
+/*var a = new Boolean(undefined);*//*todos estos resultados me devuelven un true porque estoy enviando un string y todos los string devuelven como valor un true y OJO aunque escribamos "false" lo va a tomar como true porque se encuentra entre comillas y lo toma como un string*/
+/*Para que agarre los verdaderos valores hay que quitarle las comillas, para que el 1 sea verdadero y el 0 falso*/
+/*un string "" vacío también devuelve false, pero un string lleno devuelve true*/
+
+/*var a = new Boolean( x );*//*Esto da true porque x es un String, y todos los string devuelven false*/
+
+/*
+var a = new Boolean();
+
+console.log( a.valueOf() );
+*/
+
+/*
+if (true) {
+	console.log("Me imprimi!!");
+}
+*//*Esto se imprime*/
+
+/*if ( a ) {*//*Esto también imprime porque a tiene un valor no es por el hecho de que a sea true o sea false*//*a es un objeto*/
+/*	console.log("Me imprimi!!");
+}
+*/
+
+/*
+if ( a.valueOf() ) {*//*en este caso no imprime porque esta vez si toma el valor gracias a la función valueOf que retorna el valor false*/
+	/*
+	console.log("Me imprimi!!");
+}
+*/
+
+//Objetos String
+//Sección 3, Clase 30
+
+/*El objeto tipo string es un objeto, no un arreglo de caractéres*/
+
+/*
+var b = "Herrera";
+
+
+var a = new String("Juan Carlos Pineda Chacón");
+console.log( a );
+
+console.log( a.toUpperCase() );*//*Todos los caractéres en Mayúsculas*/
+/*console.log( a.toLowerCase() )*/;/*Todos los caractéres en minúsculas*/
+
+/*
+var i = a.indexOf("n");*//*esta instrucción siempre me apunta a la primera n*/
+/*
+console.log("la letra está en la posición:", i);*/
+
+/*Si yo quiero apuntar a la última n debo hacer lo siguiente*/
+/*
+i = a.lastIndexOf("n");
+console.log("la letra está en la posición:", i);
+
+var i = a.indexOf("Herrera");
+console.log("la letra está en la posición:", i);*//*Lo marca en la posición nueve porque el espacio tambien lo toma como un caracter*/
+
+/*
+var nombre = a.substr( 6 );*//*lo que hace esto es que toma todos los caracteres despues de la posición número 6*/
+/*
+console.log( nombre );
+*/
+
+/*
+var nombre = a.substr( 6, 4 );*//*toma desde la posición 6 solo 4 caractéres*/
+/*
+console.log( nombre );
+*/
+
+/*Si sólo queremos el nombre debemos aplicar esto*/
+
+/*
+var nombre = a.substr( 0, a.indexOf(" ") );*//*aquí le decimos hasta donde vamos a tomar los datos con el indexOf*/
+/*
+console.log( nombre );*/
+
+/*Los strings tambien tienen funciones parecidas a los arreglos como el split el slice entre otros*/
+
+/*
+var split = a.split();*//*Esto crea un objeto con el arreglo con nuestra variable*/
+/*
+console.log( split );*/
+
+/*
+var split = a.split(" ");*//*Ahora bien, si nosotros le colocamos este " " le estamos diciendo que haga una separeción por los espacios*/
+/*
+console.log( split );
+console.log( split.length );*//*Esto nos dice que tenemos dos palabras*/
+
+//=======================
+
+/*
+document.write("Hola Mundo");*//*esto lo que hace es escribir en la página lo que coloquemos dentro del parentesis*/
+
+/*
+document.write( a.italics() );*//*Imprime el nombre en italica o acostado a 45º*/
+/*OSEA, ESTO LO QUE HACE ES DARLE ESTILO A NUESTRAS IMPRESIONES*/
+
+//Objeto Fecha (Date)
+//Sección 3, Clase 31
+
+/*Estos son los 3 métodos más comunes para utilizar con el objeto Fecha (Date)*/
+
+/*var hoy = new Date();*//*Las fechas son objetos*/
+/*
+var fMili = new Date(0);
+var fMiliotro = new Date(1538684191594);
+var fFija = new Date( 2016, 9, 21, 23, 10, 15, 1 );*//*Este tiene que recibir 7 argumentos que deben ir en este órden *//*este es el orden "anio, mes, dia, hora, min, seg, mili" */
+
+/*
+console.log( hoy );
+console.log( fMili );
+console.log( fMiliotro );
+console.log( fFija );
+*/
+
+/*Estos son los métodos del objeto fecha*/
+
+/*
+console.log( hoy.getFullYear() + 1 );*//*esto da una representación numérica del año, es por ello que si sumamos un número este se va a sumar*/
+/*
+console.log( hoy.getYear() );*//*NO SE DEBE CONFUNDIR CON EL DE ARRIBA, PARECEN MUY PARECIDOS, PERO NO SON LO MISMO*//*OJO OJO OJO NO USAR ESTE FORMATO OJO OJO OJO*/
+/*
+console.log( hoy.getTime() );*//*este dato representa la fecha en milisegundos*/
+/*la función de .getTime() nos sisrve para saber cuanto tiempo tarda un proceso*/
+
+/*
+var inicio = new Date();
+
+for (var i = 0; i < 15000; i++) {
+	console.log("Algo...");
+}
+
+var fin = new Date();
+*/
+
+// console.log( inicio );
+// console.log( fin );
+
+/*
+var duracion = fin.getTime() - inicio.getTime();
+console.log( duracion, "milisegundos" );
+console.log( (duracion/1000) , "segundos" );
+*/
+
+/*Hay una librería muy usada llamada momentjs.com muy utilizada para el manejo de fechas*/
+
+/*Se puede descargar la librería desde github colocando en google momentjs github o lo descargamos usando composer y npm "Node Package Manager"*/
+
+//Operaciones con Fechas
+//Sección 3, Clase 32
+
+/*var fecha = new Date(2016, 9, 20);*/
+
+/*console.log( fecha );*/
+
+/* NO PODEMOS HACER ESTO */
+
+/*
+fecha = fecha + 5;
+console.log( fecha );
+*/
+
+/*Esto lo que hace es agregarle un número 5 al final del Date*/
+
+/*En el Date hay que jugar con el Set, que sirve para ubicar una posición de la fecha, quiere decir que cada uno de los valores de las fechas posee un Set para poder ubicarlo y poder modificarlo*/
+
+/*Es aquí dónde vamos a hacer la suma de los valores que queremos sumar en las posiciones requeridas*/
+
+/*fecha.setDate( 32 );*//*Cuando sobre pasamos los días admitidos pasa al día siguiente*/
+/*setDate cambia el día osea, setea el día, hay setMinutes, setMonth, entre otros, todos depende de lo que queramos setear*/
+
+/*Lo otro que podemos hacer es una modificación al prototipo*/
+
+/*
+var fecha = new Date(2016, 9, 20);
+
+Date.prototype.sumarDias = function( dias ){*//*Este prototipo hay que guardarlo para saber sumar días, de hecho hay que guardarlo para más nunca necesitarlo*/
+	/*Aunque con la librería momentojs ubicado en momentojs.com tambien podemos usarlo y tiene funciones bastante interesantes que podemos y debemos utilizar*/
+	/*fecha.setDate(25);*/ /*Así no se puede por el contexto del prototype*/
+	/*
+	this.setDate( this.getDate() + dias  );*//*con Prototype se aplica es this*/
+	/*
+	return this; 
+}
+*/
+
+/*
+Date.prototype.sumarAnios = function( anios ){*//*Este prototipo hay que guardarlo para saber sumar años, de hecho hay que guardarlo para más nunca necesitarlo*/
+	/*Aunque con la librería momentojs ubicado en momentojs.com tambien podemos usarlo y tiene funciones bastante interesantes que podemos y debemos utilizar*/
+	/*fecha.setDate(25);*/ /*Así no se puede por el contexto del prototype*/
+	/*
+	this.setFullYear( this.getFullYear() + anios  );*//*con Prototype se aplica es this*/
+	/*
+	return this; 
+}
+*/
+
+/*
+console.log( fecha );
+console.log( fecha.sumarDias(5) );
+*/
+/*tambien le puedo restar días*/
+/*
+console.log( fecha.sumarDias(-10) 
+*/
+/*si resto de más pasa al siguiente mes*/
+/*
+console.log( fecha.sumarDias(-20) );
+*/
+
+/*Esta sería la impresión de los años*/
+/*
+console.log( fecha.sumarAnios(1) );
+*/
+/*resta de más años*/
+/*
+console.log( fecha.sumarAnios(-17) );
+*/
+/*
+console.log( fecha );
+*/
+
+//Objeto Math
+//Seccion 3, Clase 33
+
+/*El objeto Math ya viene precargado en el javascript y recide en el objeto global*/
+/*Es muy fácil utilizarlo*/
+/*debemos irnos a la consola y ejecutar la instrucción Math*/
+
+/*Si deseamos utilizarla en el código debemos ahcer lo siguiente*/
+
+var PI = Math.PI;/*Se colocan en mayusculas porque las constantes se tiene la regla de que siempre van en mayúsculas */
+var E = Math.E;
+
+console.log( PI );
+console.log( E );
+
+var num1 = 10.456789;
+
+console.log( num1 );
+console.log( Math.round( num1 ) );/*la función round redondea el número décimal y lo transforma en entero*/
+console.log( Math.round( num1*100 ) / 100 );/*Para obtener la cantidad de decimales que necesitamos la multiplicamos por el múltiplo de 10 haciendo este truco*/
+
+console.log( Math.floor( num1 ) );/*el método floor lo deja en el número entero sin redondear, osea, en este caso sería el 10*/
+
+/*Quedé en el minuto 4:35*/
