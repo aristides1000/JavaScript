@@ -1463,3 +1463,14 @@ console.log( Math.round( num1*100 ) / 100 );/*Para obtener la cantidad de decima
 console.log( Math.floor( num1 ) );/*el método floor lo deja en el número entero sin redondear, osea, en este caso sería el 10*/
 
 /*Quedé en el minuto 4:35*/
+
+/* rnd = Random = aleatorio */
+
+/*
+var rnd = Math.random();*/ /*Esto lo que hace es lanzar números aleatórios muy cercanos al 0 pero, nunca 0 ni 1*/
+/*
+console.log( rnd );
+*/
+
+/*esta función nos da un valor aleatorio */
+function
