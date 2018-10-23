@@ -1448,7 +1448,9 @@ console.log( fecha );
 
 /*Si deseamos utilizarla en el código debemos ahcer lo siguiente*/
 
-var PI = Math.PI;/*Se colocan en mayusculas porque las constantes se tiene la regla de que siempre van en mayúsculas */
+/*
+var PI = Math.PI;*//*Se colocan en mayusculas porque las constantes se tiene la regla de que siempre van en mayúsculas */
+/*
 var E = Math.E;
 
 console.log( PI );
@@ -1457,10 +1459,12 @@ console.log( E );
 var num1 = 10.456789;
 
 console.log( num1 );
-console.log( Math.round( num1 ) );/*la función round redondea el número décimal y lo transforma en entero*/
-console.log( Math.round( num1*100 ) / 100 );/*Para obtener la cantidad de decimales que necesitamos la multiplicamos por el múltiplo de 10 haciendo este truco*/
+console.log( Math.round( num1 ) );*//*la función round redondea el número décimal y lo transforma en entero*/
+/*
+console.log( Math.round( num1*100 ) / 100 );*//*Para obtener la cantidad de decimales que necesitamos la multiplicamos por el múltiplo de 10 haciendo este truco*/
 
-console.log( Math.floor( num1 ) );/*el método floor lo deja en el número entero sin redondear, osea, en este caso sería el 10*/
+/*
+console.log( Math.floor( num1 ) );*//*el método floor lo deja en el número entero sin redondear, osea, en este caso sería el 10*/
 
 /*Quedé en el minuto 4:35*/
 
@@ -1471,6 +1475,27 @@ var rnd = Math.random();*/ /*Esto lo que hace es lanzar números aleatórios muy
 /*
 console.log( rnd );
 */
-
 /*esta función nos da un valor aleatorio */
-function
+
+
+/*Esta función me ayuda a obtener valores aleatorios por los rangos que yo desee colocarle*/
+/*
+function randomEntre( min, max ){
+	return Math.floor( Math.random() * ( max-min + 1 ) + min );
+}
+
+console.log( randomEntre( 1,6 ) );
+*/
+
+/*Esta función saca la raíz cuadrada*/
+/*
+console.log( Math.sqrt( 9 ) );*/
+
+/*Esta función eleva al cuadrado*/
+/*El primer número es la base y el segundo número es el exponente (Por ende si tomo estos valores(5,2) es 5 elevado a la 2)*/
+/*
+console.log( Math.pow( 5 , 2 ) );*/
+
+//Expresiones Regulares
+//Sección 3, Clase 34
+
