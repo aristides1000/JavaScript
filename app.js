@@ -1499,3 +1499,126 @@ console.log( Math.pow( 5 , 2 ) );*/
 //Expresiones Regulares
 //Sección 3, Clase 34
 
+/*esto sirve para buscar un caracter o una cadena de caractéres en otra cadena de caractéres*/
+//var reg1 = RegExp("A");/*Si aquí hay un caracter que no está en la cadena de caractéres que queremos investigar nos va a retornar un valor null en la consola*/
+/*cabe destacar que esto posee case sensitive*/
+//var reg2 = /a/;
+
+//var texto = "Hola Mundo, 12345.";
+//var texto = "Hola 9 Mundo.";
+//var texto = "HolA MUndo.";
+//var texto = "Hola Mundo.";
+//var texto = "Hola Mundo.\nQué tal?";/*esto \n es un salto de línea*/
+//var texto = "Holaa Mundoo, Hoola de nuevoo";
+//var texto = "Holaa Mundooo, Hoola de nuevoooo";
+//console.log( texto );
+
+//var arr = texto.match( /^H/ );/*Esta expresión /^H/ busca en la primera posición de la cadena de caractéres e intenta encontrar una coincidencia si no la encuentra arroja por consola null*/
+//var arr = texto.match( /a/ ); /*También se puede hacer así a través de su expresión regular*/
+//var arr = texto.match( /o$/ );/*Esta expresión /o$/ busca en la última posición de la cadena de caractéres e intenta encontrar una coincidencia si no la encuentra arroja por consola null*/
+//var arr = texto.match( /.../ );/*Esta expresión /./ busca cualquier caracter en la posición consecutiva*/
+
+/*osea que si hacemos esto nos dá un resultado positivo*/
+//var arr = texto.match( /^.o/ );/*Nos devuelve pr consola un "Ho"*/
+
+//var arr = texto.match( /[0-9]/ );/*estos corchetes son utilizados para los rangos de números*//*Si lo dejamos así no va a encontrar nada porque no hay ningún número*/
+
+//var arr = texto.match( /[06789]/ );/*tambien puedo hacer esto sin usar los rangos*//*el único detalle es que me va a devolver null porque no hay estos valores en la cadena de caracteres*/
+
+/*pero si hago esto*/
+//var arr = texto.match( /[026789]/ );/*si porque en la cadena de caracteres si hay un 2*/
+
+/*también se pueden colocar rangos de letras*/
+//var arr = texto.match( /[a-z]/ ); /*aparece la o porque tiene case sensitive*/
+
+/*pero tambien puedo hacer esto para que tome los valores mayuscula también*/
+//var arr = texto.match( /[a-zA-Z]/ );
+
+/*Tambien se puede hacer esto*/
+//var arr = texto.match( /^H[a-z]/ );
+
+/*Tambien se puede hacer esto si quiero ver lo que está al final que concuerde	*/
+//var arr = texto.match( /[aeiou].$/ );
+
+/*Si le quito el $ al final*/
+//var arr = texto.match( /[aeiou]./ );/*aparece "ol" porque busca cualquier vocal seguido de cualquier caractér*/
+
+/*hay una forma de saber si hay espacios y es esta*/
+//var arr = texto.match( / / );/*Esto se puede hacer pero no es recomendable*/
+
+/*Si queremos saber si algún tipo de separación se debe usar esta expresión /\s/*/
+//var arr = texto.match( /\s/ );
+
+/*Esta expresión*/
+//var arr = texto.match( /a-zA-Z0-9/ );
+/*Es lo mismo que esta expresión regular*/
+//var arr = texto.match( /\w/ );/*cabe destacar que no se encuentra la ñ*/
+
+/*Esta expresión*/
+//var arr = texto.match( /0-9/ );
+/*Es lo mismo que esta expresión regular*/
+//var arr = texto.match( /\d/ );/*esto viene de decimal en ingles*/
+
+//Las expresiones regulares también tienen 3 controladores y se escriben al final así por ejemplo /\d/i
+// i = insensible /*a las mayúsculas o minúsculas*/
+// g = todas las apariciones
+// m = multilinea
+
+//var arr = texto.match( /m/ );/*si lo esecribo así no lo va a encontrar porque la m está en mayúscula M*/
+/*Por ende tenemos que escribir esto para que elimine el case sensitive y haga match, osea, encuentre la letra m*/
+//var arr = texto.match( /m/i );
+
+/*Esta expresión g me devuelve todas las apariciones*/
+//var arr = texto.match( /[aeiou]/g );
+
+//var arr = texto.match( /[aeiou]/ig );/*Esto también da la posibilidad de encontrar todos los caracteres independientemente de que sea mayúsculas o minúsculas*/
+
+//var arr = texto.match( /[aeiou]|[áéíóúñ]/ig );/*si quiero que aparezca la é tildada debo escribir pipe "|" representa el or lógico*/
+
+//pero es lo mismo que esto
+//var arr = texto.match( /[aeiouáéíóúñ]/ig );
+//var arr = texto.match( /a/g );
+//var arr = texto.match( /o+/g );/*esto también muestra los repetidos sea cual sea su cantidad de repetición*/
+
+/*otra expresión regular sería esta con el signo de "?"*/
+//var arr = texto.match( /o?/g );/*busca en cada caracter si es una o, y si no, lo deja vacío en la posición del caracter*/
+/*dándo como resultado por consola esto 
+(14) ["", "o", "", "", "", "", "", "", "", "", "o", "o", "", ""]*/
+/*hay que tener cuidado cuando estemos usando esto, porque si el arreglo está vacío nos devuelve un valor sin caracteres*/
+
+//var arr = texto.match( /o*/g );/*Esto hace match pero de una forma diferente*/
+/*hay que tener cuidado cuando estemos usando esto igualmente, porque si el arreglo está vacío nos devuelve un valor sin caracteres*/
+
+/*con los siguientes parámetros le podemos decir la cantidad de veces que queremos que aparezca el caracter "o"*/
+//var arr = texto.match( /o{3,4}/g );/*Aquí dice que para hacer match tiene que aparecer por lo menos 2 veces*//* /o{2,3}/g el siguiente número indica desde cuántos hasta cuántos caracteres queremos hacer match*/
+
+//console.log( arr );
+
+//Expresiones regulares - Segunda parte
+//Sección 3, Clase 35
+
+//var reg1 = RegExp("A");
+//var reg2 = /a/;
+// i = insensible /*a las mayúsculas o minúsculas*/
+// g = todas las apariciones
+// m = multilinea
+
+//var texto = "Aeropuerto";
+var texto = "La Respuesta de la suma es: 45 + 60 = 105";
+console.log( texto );
+
+
+//var arr = texto.match( /[aeiou]{2,2}/ig );/*2 vocales que se repitan 2 veces, al menos 2 veces {2,2}*/
+/*ver resultados en el apartado de evernote*/
+
+//var arr = texto.match( /\w{2,2}/ig );/*esta expresión \w agarra cualquier letra del ingles menos las vocales con acentos "áéíóú ni la ñ" OJO tambien incluye los números OJO*//*y como tiene esto {2,2} las agarra de 2 en 2*/
+
+//var arr = texto.match( /\d{1,}/g );/*cuando se coloca esto {1,} quiere decir, de 1 vez a "n" veces, entenciendo infinitas veces*/
+
+var arr = texto.match( /\d{1,}|respuesta/ig );/*se uso "|" para que se incluyera respuesta*/
+
+console.log( arr );
+
+//El ";" es opcional?
+//Sección 4, Clase 36
+
