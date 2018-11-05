@@ -1604,9 +1604,10 @@ console.log( Math.pow( 5 , 2 ) );*/
 // m = multilinea
 
 //var texto = "Aeropuerto";
+/*
 var texto = "La Respuesta de la suma es: 45 + 60 = 105";
 console.log( texto );
-
+*/
 
 //var arr = texto.match( /[aeiou]{2,2}/ig );/*2 vocales que se repitan 2 veces, al menos 2 veces {2,2}*/
 /*ver resultados en el apartado de evernote*/
@@ -1614,11 +1615,54 @@ console.log( texto );
 //var arr = texto.match( /\w{2,2}/ig );/*esta expresión \w agarra cualquier letra del ingles menos las vocales con acentos "áéíóú ni la ñ" OJO tambien incluye los números OJO*//*y como tiene esto {2,2} las agarra de 2 en 2*/
 
 //var arr = texto.match( /\d{1,}/g );/*cuando se coloca esto {1,} quiere decir, de 1 vez a "n" veces, entenciendo infinitas veces*/
-
-var arr = texto.match( /\d{1,}|respuesta/ig );/*se uso "|" para que se incluyera respuesta*/
-
+/*
+var arr = texto.match( /\d{1,}|respuesta/ig );*//*se uso "|" para que se incluyera respuesta*/
+/*
 console.log( arr );
-
+*/
 //El ";" es opcional?
 //Sección 4, Clase 36
 
+/*
+var a = 10
+var b = 20
+var c = 30
+var d = "Fernando"
+
+console.log(a)
+console.log(b)
+console.log(c)
+console.log(d)
+*/
+/*Aquí no da error la carencia de puntos y comas*/
+/*
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;var a = 10;;;;;;;;;;
+;;;;;;;var b = 20;;;;;;;;;;
+;;;;;;;var c = 30;;;;;;;;;;
+;;;;;;;var d = "Fernando";;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;console.log(a);;;;;;;;;;
+;;;;;;;console.log(b);;;;;;;;;;
+;;;;;;;console.log(c);;;;;;;;;;
+;;;;;;;console.log(d);;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+*/
+
+/*Esto tampoco da error*/
+
+/*Pero esto*/
+
+/*
+function getNumero(){
+	return 
+		10
+}
+
+console.log( getNumero() );
+*/
+
+/*Da undefined*/
