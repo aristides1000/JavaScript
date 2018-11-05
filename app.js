@@ -1666,3 +1666,7 @@ console.log( getNumero() );
 */
 
 /*Da undefined*/
+
+//Comentarios en javascript y espaciado
+//Sección 4, Clase 37
+
