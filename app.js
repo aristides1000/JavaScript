@@ -1634,9 +1634,10 @@ console.log(b)
 console.log(c)
 console.log(d)
 */
+
 /*Aquí no da error la carencia de puntos y comas*/
+
 /*
-;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;
 ;;;;;;;var a = 10;;;;;;;;;;
@@ -1669,4 +1670,101 @@ console.log( getNumero() );
 
 //Comentarios en javascript y espaciado
 //Sección 4, Clase 37
+
+// Esto es un comentario de linea simple
+
+/*
+
+Comentario multilinea
+Comentario multilinea
+Comentario multilinea
+
+*/
+/*
+var miArreglo = [
+*/
+	//la primera pos
+	//sirve para
+	//hace cualquier cosa
+/*
+	"Fernando",
+*/
+	// la segunda 
+	//Es un objeto
+	//Hace
+	/*
+	{
+*/
+		//esta propiedad hace...
+		//por lo cual ...
+		//es bueno...
+		/*
+		nombre:
+			"Fernando",
+*/
+
+
+
+		//esta propiedad hace...
+		//por lo cual ...
+		//es bueno...
+		/*
+		apellido:
+			"Herrera",
+*/
+
+		//esta funcion hace...
+		//por lo cual ...
+		//es bueno...
+		//no tiene parámetros...
+		//pero puede...
+		/*
+		getNombre:function(){
+
+			return this.nombre + " " + this.apellido;
+		
+
+
+		}
+	},
+*/
+	//Tercera posición del arreglo
+	/*
+	true, 
+*/
+	//funcion de la cuarta...
+	//...
+	/*
+	function(){ 
+		console.log( this ); 
+	}
+
+*/
+
+
+
+//fin del arreglo principal
+//no hacer nada despues
+//no hacer nada despues
+//no hacer nada despues
+//no hacer nada despues
+/*
+];
+
+console.log(
+		miArreglo
+	);
+*/
+
+//Los más sensato es siempre comprimir el código con herramientas online antes de subir a producción
+//Se comprime el código con una simple búsqueda en google
+
+
+//Esta es la mejor página para comprimir archivos
+//htmlcompressor.com/compressor/
+
+/*OJOJOJOJOJOJOJO es una Excelente página JOJOJOJOJOJOJOJOJOJ*/
+
+//Palabras reservadas de JavaScript
+//Seeccion 4, Clase 38
 
