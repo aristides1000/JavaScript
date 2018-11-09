@@ -1766,5 +1766,134 @@ console.log(
 /*OJOJOJOJOJOJOJO es una Excelente página JOJOJOJOJOJOJOJOJOJ*/
 
 //Palabras reservadas de JavaScript
-//Seeccion 4, Clase 38
+//Seccion 4, Clase 38
 
+/*Son palabras que se crean con la finalidad de ser usadas sólo para lo que ya han sido creadas con antelación en los lenguajes de programación*/
+
+/*osea, no las podemos usar para la declaración de variables*/
+
+/*Estas son las palabras reservadas en javascript*/
+
+/*
+	Palabras reservadas
+	Y buenas practicas
+ */
+
+
+// abstract
+
+// boolean
+
+// break
+
+// byte
+
+// case
+
+// catch
+
+// char
+
+// class
+
+// const
+
+// continue
+
+// debugger
+
+// default
+
+// delete
+
+// do
+
+// double
+
+// else
+
+// enum
+
+// export
+
+// extends
+
+// false
+
+// final
+
+// finally
+
+// float
+
+// for
+
+// function
+
+// goto
+
+// if
+
+// implements
+
+// import
+
+// in
+
+// instanceof
+
+// int
+
+// interface
+
+// long
+
+// native
+
+// new
+
+// null
+
+// package
+
+// private
+
+// protected
+
+// public
+
+// return
+
+// short
+
+// static
+
+// super
+
+// switch
+
+// synchronized
+
+// this
+
+// throw
+
+// throws
+
+// transient
+
+// true
+
+// try
+
+// typeof
+
+// var
+
+// void
+
+// volatile
+
+// while
+
+// with
