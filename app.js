@@ -1897,3 +1897,143 @@ console.log(
 // while
 
 // with
+
+//Manejo de errores en JavaScript
+//Sección 4, Clase 39
+
+/*JavaScript tiene un manejador de errores muy poderoso pero muy pocas personas lo manejan*/
+
+/*El primero es el Try Catch*/
+
+/*Hay que estár pendiente al momento de colocar el throw antes del try, ya que al hacer esto no ejecutamos más nada del código, se debe colocar después del try para que no genere ningún error*/
+
+/*Aunque si va a tomar los demás valores de otros archivos JavaScript excepto todo lo que esté debajo de algún throw antes del try*/
+
+/*
+throw 'Error!!!';
+*/
+
+/*
+try {*//*try quiere decir intenta*/
+
+/*
+	var a = 100;
+
+	console.log("El valor de a:", a);
+
+	if( a === 100 ){
+
+		throw 'que mal';
+
+	}else{
+		throw 'oh oh!';
+	}
+*/
+
+	/*con esta función se logran disparar los errores de forma literal con relación a lo que le hayamos colocado*/
+	//throw 'oh oh!';
+	/*
+	throw new Error('Error tipo 1');
+	*/
+
+/*
+	throw {
+		nombreError:"Error tipo 1",
+		accion:"Salir corriendo a echarle agua al servidor",
+		coderror:1
+	}
+*/
+
+/*
+	throw function(){
+		console.log("Función del throw...")
+	}
+
+	console.log("Esta parte nunca se ejecuta");
+*/
+
+	/*throw 1;*/ //n cualquier número 
+/*
+	throw new Error('Nombre error');
+*/
+	/*Los errors son un objeto*/
+/*
+}
+*/
+
+/*
+catch(e){*//*el (e) quiere decir el error*/
+
+	/*console.log("Error de catch:", e );*/
+/*
+	if ( e === "que mal" ){
+		console.log("Error tipo 1");
+	}
+
+	if ( e === "oh oh!" ){
+		console.log("Error tipo 2");
+	}
+
+*/
+	/*Esto es para un error sin mensaje específico*/
+	//console.log( e );
+
+	/*Si queremos que el error sea mucho más específico debemos colocar esto*/
+	//console.log( e.message );
+
+/*
+	console.log( e );
+	console.log( e.nombreError );
+	console.log( e.accion );
+	console.log( e.coderror );
+*/
+
+/*
+	e();
+
+	console.log("Parte del catch");
+*/
+	
+	/*
+	registroError( e );
+	*/
+
+/*
+	console.log( e );
+
+}
+*/
+
+/*
+finally{*//*finaliza el catch sin importar la impresión de los errores*/
+
+/*
+	console.log("Finalmente");
+
+}
+*/
+
+/*Siempre que se coloque un try hay que colocar un catch o un finally, ya que si no lo hacemos nos va a dar error en las consola*/
+
+/*
+function registroError(e){
+
+	var ahora = new Date()
+
+	console.log("Se registró un error: ", e , " a las: ", ahora.getTime() );
+
+}
+*/
+
+//Coockies - Instalación de node.js en Mac OSX
+//Sección 4, Clase 40
+
+/*Esta lección me la salto porque yo tengo windows*/
+
+//Coockies - Instalación de node.js en Mac OSX
+//Sección 4, Clase 41
+
+/*Listo los comandos*/
+
+//escape, unescape y cookies
+//Sección 4, Clase 42
