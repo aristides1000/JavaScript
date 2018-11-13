@@ -2183,3 +2183,240 @@ console.log( carro.imprimir.call( carro2 ) );
 //IF... ELSE...
 //Sección 4, Clase 44
 
+/*
+var nota = 55;
+*/
+
+/*
+if( nota >= 60 ){*/ /*La condicón if no necesariamente debe ir acompañada de una condición else*/
+	/*
+	console.log("Aprobó");
+
+}else{
+
+	console.log("Reprobó");
+
+}
+*/
+
+/*
+if( nota >= 90 ){
+
+	console.log("A");
+
+}else if( nota >= 80 ){*//*Aquí se puede hacer uso del else if y colocar cuantas condiciones querámos colocar*/
+/*
+	console.log("B");
+
+}else if( nota >= 70 ){
+
+	console.log("C");
+
+}else if( nota >= 60 ){
+
+	console.log("D");
+*/
+/*
+}else{
+
+	console.log("F");
+
+}
+*//*
+}else{
+	*//*
+	if( nota <50 ){
+	
+		console.log("-F");
+	
+	}else{
+
+		console.log("+F");
+
+	}
+	*/
+	/*También se pueden colocar los condicionales de esta forma y de igual manera van a dar una  respuesta pero sin la consideración del else*/
+	/*
+	if( nota > 50 )	
+		console.log("F");
+	*/
+	/*Pero lo más recomendable es colocarle sus llaves*/
+	/*
+	if( nota > 50 ){
+		console.log("F");
+	}
+	console.log("Algo por aquí...");
+}
+
+console.log("Terminó el código.");
+*/
+
+/*
+var a = 30;
+var b = 20;
+*/
+
+/*
+var c = 0;
+*/
+
+/*aquí vamos a determinar cuál es el mayor de los dos números entre el valor de "a" y el valor de "b"*/
+
+/*
+if( a > b ){
+	c = a;
+}else{
+	c = b;
+}
+*/
+
+/*También se puede determinar cuál es el mayor de entre los dos de esta forma*/
+
+/*
+var c = ( a > b )? function(){
+
+	console.log("A es mayor a B");
+	return a;
+
+}() : function(){
+
+	console.log("B es mayor a A");
+	return b;
+
+}();
+*/
+
+/*dónde el "?" representa lo que vamos a evaluar y el ":" representa el sino*/
+
+/*esta es una de las versiones más cortas*/
+/*
+var c = ( a > b )? a : b ;
+*/
+/*dónde el "?" representa lo que vamos a evaluar y el ":" representa el sino*/
+
+/*
+var a = 10;
+var b = undefined;
+*/
+
+/*cón esta condición lo que le estamos solicitando al programa es que tome el valor de la variable que esté definido y que y nos lo muestre en patalla, en la expresión "var c = a || b ;" "||" esto quiere decir el operador lógico de "or"*/
+
+/*
+var c = a || b ;
+*/
+
+/*
+console.log( c );
+*/
+
+/*Si ambas variables tienen un valor osea, que no tenga un "undefined" se tomará siempre el valor de la primera variable que hayamos colocado*/
+
+/*
+var a = 10;
+var b = 20;
+
+var c = a || b;
+
+console.log( c );
+*/
+
+/*
+function getNombre( nombre ){
+
+	var nomb = nombre || "<sin nombre>" || "<sin apellido>";
+
+	console.log( nomb );
+
+};
+
+getNombre();
+*/
+
+/*Es importante recalcar que el peso que tiene el valor de las variables que creemos, para hacerlo de una forma mucho más secilla se tiene que "123abc" tiene más peso que "undefined" y que "undefined" tiene mayor peso que "null", al decir que tiene mayor peso quiere decir que el más pesado es el primer valor que va a tomar por defecto*/
+
+//Switch... Condicional Múltiple
+//Sección 4, clase 45
+
+/*
+var mes = 2;
+
+switch( mes ){
+
+	case 1:
+		console.log("Enero");
+		break;*//*es importante siempre colocarle el break porque sino continua con las evaluaciones consiguientes*/
+
+/*
+	case 2:
+		console.log("Febreo");
+		break;
+
+	case 3:
+		console.log("Marzo");
+		break;
+
+	default:
+		console.log("Cualquier otro mes");
+}
+*/
+
+/*cabe acotar que también se puede hacer una evaluación al lado de los "case" que están dentro del switch*/
+
+/*
+var mes = undefined;
+
+switch( mes ){
+
+	case ( 10 > 5 )? 40:1 :
+		console.log("Enero");
+		break;*//*es importante siempre colocarle el break porque sino continua con las evaluaciones consiguientes*/
+/*
+	case undefined:*//*aquí, dá como resultado por consola "Febrero", ya que el valor del mes es undefined y por ello toma ese valor*/
+		/*
+		console.log("Febreo");
+		break;
+
+	case 3:
+		console.log("Marzo");
+		break;
+
+	default:
+		console.log("Cualquier otro mes");
+}*/
+
+//JSON y breve historia
+//Sección 4, Clase 46
+
+/*
+var objetoJS = {
+	nombre:"Fernando",
+	edad: 30,
+	imprimir: function(){*//*es importante trabajar con prototipos para que no se pierdan las funciones internas dentro de los objetos*/
+		/*console.log(this.nombre , this.edad);
+	}
+};
+
+console.log( "Objeto literal", objetoJS );
+
+var jsonString = JSON.stringify( objetoJS );
+
+console.log( jsonString );
+*/
+/*Con esta página web podemos hacer evaluaciones del código de los archivos .json o para verificar si el archivo json es válido*/
+/*
+http://json.parser.online.fr/
+*/
+
+/*si deseamos transformar un json en un objeto JavaScript debemos hacer lo siguiente*/
+/*
+var objetoDesdeJson = JSON.parse( jsonString );
+
+console.log( objetoDesdeJson );
+
+console.log( objetoDesdeJson.nombre );
+console.log( objetoDesdeJson.edad );
+*/
+
+//Ciclo While y Do While
+//Sección 5, Clase 47
+
