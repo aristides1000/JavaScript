@@ -2420,3 +2420,72 @@ console.log( objetoDesdeJson.edad );
 //Ciclo While y Do While
 //Sección 5, Clase 47
 
+/*
+var i = 1;
+
+while(  i <= 10  ){
+
+	console.log( i );
+
+	i++;
+
+};
+*/
+
+/*esta es una aplicación un poco más técnica de un while*/
+
+/*
+var i = 0;
+
+while(  i < 10  ){
+
+	i++;
+*/
+/*
+	if( i === 5 ){
+
+		break;
+	
+	}
+*/
+/*
+	if( i === 5 ){
+
+		continue;*//*Tambien se puede hacer el continue y al momento de hacerlo se brinca el número 5 y no lo imprimi*/
+/*	
+	}
+	console.log( i );
+
+};
+
+*/
+
+/*Tambien existe la instrucción do while que es así*/
+
+/*
+var i = 0;
+*/
+
+/*Es como el ciclo while al revés*/
+
+/*
+do{
+
+	i++;
+*/
+
+	//break;/*si ejecuto aquí el break, nunca se va a ejecutar el código solicitado*/
+
+/*
+	if ( i === 5 ) {
+		continue;*//*Si colocamos continue nos obviamos el #5 porque el continue continúa desde arriba*/
+/*
+	}
+
+	console.log( i );
+
+}while( i < 10 );
+*/
+
+//Ciclo For y For in - reflejo
+//Sección 5, Clase 48
