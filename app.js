@@ -2030,10 +2030,156 @@ function registroError(e){
 
 /*Esta lección me la salto porque yo tengo windows*/
 
-//Coockies - Instalación de node.js en Mac OSX
+//Coockies - Instalación de node.js en Windows
 //Sección 4, Clase 41
 
 /*Listo los comandos*/
 
 //escape, unescape y cookies
 //Sección 4, Clase 42
+
+/*con esta función de las cookies sólo hace falta hacerla una sola vez y con ello ya tendremos las cookies, además de ello hay que tener en cuenta que las*/
+
+/*para poder inicializar la información de las cookies debemos primeramente tener el servidor cargado junto con http-server con la siguiente línea de código como usuario administrador en la terminal*/
+
+/*
+Esta es la línea de comando a ejecutar en el terminal de windows
+
+http-server C:\xampp\htdocs\JavaScript -p 8081
+*/
+
+/*la forma correcta de hacer las cookies es a través de funciones*/
+
+/*
+function crearCookie( nombre, valor ){
+
+	valor = escape(valor);*//*el escape se hace para poder meter los datos en una cookie*/
+/*
+	var hoy = new Date();
+	hoy.setMonth( hoy.getMonth() + 1 );
+
+	document.cookie = nombre+"="+ valor +";expires=" + hoy.toUTCString()+";";
+
+}
+*/
+
+/*
+Ésta es una forma de crear las cookies una de las formas más pros es a través de una función
+*/
+
+//document.cookie = "nombre=fernando;";
+//document.cookie = "apellido=herrera;";
+
+/*
+var demo = "123;123*123'123/ 123";
+
+console.log(  demo  );
+console.log(  escape(demo)  );
+*/
+/*tambien existe una forma de desencriptar la coockie y es a través de la función unescape*/
+/*
+console.log(  unescape( escape(demo) )  );
+*/
+
+/*
+function borrarCookie( nombre ){
+
+	var hoy = new Date();
+	hoy.setMonth( hoy.getMonth() - 1 );
+
+	document.cookie = nombre+"=x;expires=" + hoy.toUTCString()+";";
+
+}
+
+function getCookie( nombre ){
+
+	var cookies = document.cookie;
+
+	var cookieArr = cookies.split("; ");
+	console.log( cookieArr );
+
+	for( var i =0; i < cookieArr.length; i++ ){
+
+		var parArr = cookieArr[i].split("=");
+		cookieArr[i] = parArr;
+
+		if( parArr[0] === nombre ){
+			return unescape( parArr[1] );
+		}
+
+	}
+*/
+
+	//console.log( cookieArr );
+
+/*
+	return undefined;
+
+}
+
+console.log( getCookie("direccion") );
+*/
+
+//crearCookie( "nombre","Fernando" );
+//crearCookie( "correo","loquesea@gmail.com" );
+//crearCookie( "direccion","Caracas, Venezuela" );
+
+//borrarCookie( "nombre" );
+
+//var cookies = document.cookie;
+
+//console.log( cookies );
+
+//Funciones especiales: Call(), Apply() y Bind()
+//Sección 4, Clase 43
+
+/*
+var carro = {
+	color: "Blanco",
+	marca: "Mazda",
+	imprimir:function(){
+		var salida = this.marca + " - " + this.color;
+		return salida
+	}
+}
+
+var carro2 = {
+	color: "Rojo",
+	marca: "Toyota"
+}
+
+
+
+console.log( carro.imprimir() );
+
+var logCarro = function( arg1, arg2 ){
+	
+	console.log("Carro: ", this.imprimir() );
+	console.log("Argumentos: ", arg1, arg2 );
+	console.log("===========================");
+
+}
+*/
+
+/*logCarro();*//*esto da error*/
+/*Se debe colocar esto*/
+
+/*
+var logModeloCarro = logCarro.bind( carro );*//*el bind setea el "carro" en el this*/
+
+/*
+logModeloCarro("abc","xyz");
+
+logModeloCarro.call( carro, "123", "456" );*//*Así es el formato del call*/
+/*
+logModeloCarro.apply( carro, [ "asd" , "qwe" ] );*//*Así es el formato del apply*/
+
+/*Esto nos sirve para desarrollar funciones prestadas*/
+
+/*
+console.log( carro.imprimir.call( carro2 ) );
+*/
+
+//IF... ELSE...
+//Sección 4, Clase 44
+
