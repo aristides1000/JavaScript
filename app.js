@@ -1,3 +1,8 @@
+//"use strict";
+/*No es recomendable dejarlo en la parte superior del archivo*/
+/*para entender de dónde procede esto debemos ir al apartado de la clase 55*/
+//JavaScript - "use strict" - Modo estricto
+//Sección 6, Clase 55
 /*
 var a = 1;
 var b = "Fernando";
@@ -2715,3 +2720,131 @@ document.onmouseup = function(){
 //Evento "on submit" y parámetros URL
 //Sección 6, Clase 53
 
+/*
+function validar(){
+
+	var nombre = document.getElementById("txtNombre").value;
+	var apellido = document.getElementById("txtApellido").value;
+*/
+
+/*Estos son validadores en javascript*/
+
+/*
+	if( nombre.length < 1 ){
+
+		return false;
+
+	}
+
+	if( apellido.length < 1 ){
+
+		return false;
+
+	}
+
+	return true;
+
+}
+*/
+
+/*un lugar en la web donde podemos encontrar validaciones es angular autovalidate y jquery autovalidate*/
+
+/*jquery autovalidate*/
+/*http://phrogz.net/JS/FormAutoValidate/formautovalidate_docs.html*/
+
+/*¿Cómo podemos obtener los datos del URL?*/
+/*de esta forma*/
+
+/*
+console.log( window.location.search );
+console.log( window.location.search.split("&") );
+*/
+
+/*No hace falta inventar el agua caliente, lo único que debemos hacer es copiarnos el código adjunto*/
+/*
+
+function getParamURL(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+console.log( getParamURL("txtNombre") );
+*/
+
+//Cajas de dialogo
+//Sección 6, Clase 54
+
+/*
+alert("Hola Mundo");
+*/
+
+/*
+var acepto = confirm( "Está seguro que desea borrar algo?" );
+
+console.log( acepto );
+*/
+
+/*
+var nombre = prompt( "Ingrese su nombre", "nombre" );
+
+console.log( nombre );
+*/
+
+/*no es recomendable utilizar estas alertas anteriores*/
+/*Lo más recomendable es utilizar las de sweet alert que están en esta dirección web*/
+
+/*https://sweetalert2.github.io*/
+
+/*O podemos usar un montón de notificaciones a través de la busqueda en la web de javascript notification y ahí la vamos a encontrar*/
+
+//JavaScript - "use strict" - Modo estricto
+//Sección 6, Clase 55
+
+/*Esta línea de código siguiente sirve para que javascript se ejecute de una forma estricta*/
+/*"use strict";*/
+/*La linea anterior hace que JavaScript sea un poco más rigurosa al momento de evaluar ciertas cosas en específicos*/
+/*es importante recalcar que debe estar en la primera línea de código para que lo tome en consideración, porque si no, no lo tomará en consideración*/
+
+/*
+function getNombre(){
+	"use strict";*//*podemos colocar el use strict dentro de las funciones*/
+
+/*
+	var nombre2 = "Juan";
+
+	return nombre2;
+}
+
+var nombre = "Fernando";
+
+console.log( nombre );
+
+console.log( getNombre() );
+*/
+
+/*Ahora bien, si queremos hacer solo use strict en un solo archivo seleccionado debemos hacer lo siguiente*/
+
+/*
+(function(){
+	"use strict";
+
+	function getNombre(){
+		"use strict";
+
+		var nombre2 = "Juan";
+
+		return nombre2;
+	}
+
+	var nombre = "Fernando";
+
+	console.log( nombre );
+
+	console.log( getNombre() );
+
+})();
+*/
+
+/*el modo estricto siempre debe ir encapsulado*/
+
+//Despedida.. pero hay más por venir
+//Sección 7, Clase 56
