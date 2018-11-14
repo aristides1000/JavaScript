@@ -2569,3 +2569,122 @@ for( num in [ 1,2,3,4,5,6,7,8,9,10 ] ){*//*esto nos devuelve las posiciones inde
 //Rotulando los ciclos
 //Sección 5, Clase 49
 
+/*
+for_principal:*//*Esto es una rotulación*/
+/*
+for( var i = 1; i <= 5; i++ ){
+
+	console.log("i",i)
+
+	for_secundario:
+	for( var j = 1; j<=5; j++ ){
+
+		console.log("j",j);
+
+		//continue for_principal;
+
+		for( var x = 1; x <= 5; x++ ){
+			console.log("x",x);
+*/
+
+			/*si queremos salirnos del todo debemos darle un break y llamar al rotulado for_principal*/
+			//break for_principal;
+			/*también puedo hacerlo del secundario*/
+			
+			/*
+			break for_secundario;
+		}
+
+	}
+
+}
+*/
+
+//Funciones de tiempo en JavaScript
+//Sección 5, Clase 50
+
+/*
+setTimeout(function(){*//*esto es para su ejecución despues de un segundo
+
+	console.log("Pasó un segundo");
+
+}, 1000//esto representa 1000 milisegundos, osea un segundo);
+*/
+
+/*
+var segundos = 0;
+*/
+
+//setInterval(function(){
+
+/*
+var intervalo = setInterval(function(){
+
+	segundos ++;
+*/
+
+	//console.log("seg", segundos); /*si lo hacemos así se va a ejecutar infinítamente*/
+
+/*
+	console.log( "seg", segundos );
+
+	if( segundos === 3 ){
+		clearInterval( intervalo );
+	}
+
+}, 1000);
+*/
+
+/*
+var juan = {
+	nombre:"Juan",
+	edad: 30,
+	imprimir: function(){
+		
+		var self = this;
+
+		setTimeout(function(){
+			//console.log( this.nombre, this.edad );*//*Esto da undefined hay que hacerlo así*/
+			/*
+			console.log( self );
+			console.log( self.nombre, self.edad );
+		},1000);	
+	
+	}
+};
+
+juan.imprimir();
+*/
+
+//Eventos 101
+//Sección 6, Clase 51
+
+/*Ésta Clase viene con recursos*//*ver el archivo eventos.pdf*/
+
+/*Los eventos no es más que las acciones que hacen que se dispare o se active una función, eso es todo*/
+
+/*
+function evento( arg ){
+
+	console.log("Me activé");
+	console.log( arg.x, arg.y );
+
+}
+
+var objeto = document.getElementById("objDemo");
+*/
+
+//console.log( objeto );
+
+/*objeto.addEventListener("keypress",evento);*//*El onkeypress se usa cuando se usa del lado del html*/
+
+/*
+objeto.addEventListener("click",evento);
+*/
+
+//objeto.click();/*Esto sirve para simular un click en el objeto*/
+
+/*tenemos que experimentar con los eventos que se encuentran escritos en el archivo Eventos.pdf*/
+
+//Bloqueando el click derecho de la página.
+//Sección 6, Clase 52
