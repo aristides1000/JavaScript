@@ -2490,3 +2490,82 @@ do{
 //Ciclo For y For in - reflejo
 //Sección 5, Clase 48
 
+/*
+for ( var i = 0; i <= 10; i++ ){*//*si yo le coloco i+=2 incrementa de 2 en 2, i+=3 incrementa de 3 en 3*/
+
+		/*cada ciclo for puede tener un ciclo for interno y así sucesivamente*/
+		/*
+		for (var i = Things.length - 1; i >= 0; i--) {
+			Things[i]
+		}
+		*/
+
+/*
+	if( i == 5 ){
+*/
+
+		//continue;/*Aquí se salta el número 5*/
+		//break;/*Aquí se detiene la ejecución al llegar al número 5*/
+/*
+	}
+*/
+
+/*
+	console.log( i );
+
+};
+*/
+
+/*Vamos a hacer el estudio del ciclo for in a un poco de mayor profundidad*/
+
+/*
+var Persona = function(){
+	this.nombre = "Juan";
+	this.apellido = "Pineda";
+	this.edad = 18;
+}
+
+var juan = new Persona();
+
+Persona.prototype.direccion = "Caracas";
+*/
+
+/*
+for ( prop in juan ){*//*esto quiere decir que por cada "prop"=propiedad en "juan"*/
+
+	//console.log( !juan.hasOwnProperty( prop ) );/*esto nos ayuda a descubrir cuál está dentro del mismo objeto y cuál es un prototipo*/
+	//if( !juan.hasOwnProperty( prop ) )/*el signo de exclamación representa la negación*/
+		//continue;/*Si no existe la propiedad entonces has un continue osea ignora el valor que estás tomando*//*esto muestra sólo los prototipos*/
+
+	//if( juan.hasOwnProperty( prop ) )/*Esta muestra solo los datos principales del objeto*//*Este término se conoce como reflejo o reflection es la habilidad que poseen los objetos de conocerce a si mismos, podemos evaluarlos en si mismos*/
+		//continue;
+
+/*
+	console.log( prop, ":",  juan[prop] );
+
+}
+*/
+
+/*
+for( num in [ 1,2,3,4,5,6,7,8,9,10 ] ){*//*esto nos devuelve las posiciones indexadas de los valores colocados*/
+	/*
+	console.log( num );
+}
+*/
+
+/*si queremos obtener los valores, debemos hacerlo con un foreach así*/
+
+/*[1,2,3,4,5,6,7,8,9,10].forEach(function( val ){*//*el forEach debe ser colocado en formato camelcase por que el leguaje posee case sensitive*/
+
+/*
+[1,2,3,4,true,6,7,8,false,"nombre"].forEach(function( val ){*//*tambien funciona con los objetos*/
+
+/*
+	console.log( val );
+
+});
+*/
+
+//Rotulando los ciclos
+//Sección 5, Clase 49
+
