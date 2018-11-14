@@ -2688,3 +2688,30 @@ objeto.addEventListener("click",evento);
 
 //Bloqueando el click derecho de la página.
 //Sección 6, Clase 52
+
+/*
+document.onmousedown = function(arg){
+
+	if( arg.button === 2 ){
+		
+		alert("Click bloqueando");
+		return;
+
+	}
+
+	console.log("No hay problema");
+
+}
+
+document.onmouseup = function(){
+
+	var texto = window.getSelection().toString();
+
+	console.log( texto );
+
+}
+*/
+
+//Evento "on submit" y parámetros URL
+//Sección 6, Clase 53
+
